@@ -21,7 +21,7 @@ for kk in range(len(Choice)):
     P(str(kk+1) + '.' + Choice[kk], sep = '\t')
 Section = input('In which section do you want to buy? \n')
 if Section == '1':
-    menu = ['Pizza', 'Milkshake','Burger', 'Ice-Cream', 'Taco    ']
+    menu = ['Pizza', 'Milkshake','Burger', 'Ice-Cream', 'Taco']
     price =['150', '120','100','40','60']
 
     for kk in range(len(menu)):
@@ -250,7 +250,7 @@ elif  Section == '2':
     if d == 'card':
         
 
-        CC = ('Visa', 'Mastercard', 'Amex')
+        CC = ('Visa (INR)', 'Mastercard (YEN)', 'Amex (DOLLAR)')
 
         for kk in range(len(CC)):
          print(str(kk+1) + '. ' + CC[kk])
@@ -266,7 +266,8 @@ elif  Section == '2':
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
             else:
-                type_effect('Cant use this card')
+                type_effect('Cant use this card, this card is only for INR')
+                type_effect('Payment fail so you pay with cash')
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
 
@@ -279,7 +280,8 @@ elif  Section == '2':
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
             else:
-                type_effect('Cant use this card')
+                type_effect('Cant use this card, this card is only for YEN')
+                type_effect('Payment fail so you pay with cash')
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
 
@@ -292,15 +294,15 @@ elif  Section == '2':
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
             else:
-                type_effect('Cant use this card')
+                type_effect('Cant use this card, this card is only for DOLLAR')
+                type_effect('Payment fail so you pay with cash')
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
 
     else:
-        print('Dingg come from the machine')
+        print('You pay')
         type_effect('Thank you for using Amazon. ')
         type_effect('I wish seeing you again. ') 
-
 
 
 
@@ -412,7 +414,7 @@ elif Section == '3':
 
         checkout = int(input('Please choose a card to prooceed checkout! '))
 
-        if checkout == 1:
+       if checkout == 1:
             type_effect('We have 10% discount in INR(₹) ')
             if choice == 2:
                 Inr = grand_tot / 10
@@ -421,7 +423,8 @@ elif Section == '3':
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
             else:
-                type_effect('Cant use this card')
+                type_effect('Cant use this card, this card is only for INR')
+                type_effect('Payment fail so you pay with cash')
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
 
@@ -434,7 +437,8 @@ elif Section == '3':
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
             else:
-                type_effect('Cant use this card')
+                type_effect('Cant use this card, this card is only for YEN')
+                type_effect('Payment fail so you pay with cash')
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
 
@@ -447,15 +451,15 @@ elif Section == '3':
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
             else:
-                type_effect('Cant use this card')
+                type_effect('Cant use this card, this card is only for DOLLAR')
+                type_effect('Payment fail so you pay with cash')
                 type_effect('Thank you for using Amazon. ')
                 type_effect('I wish seeing you again. ') 
 
     else:
-        print('Dingg come from the machine')
+        print('You pay')
         type_effect('Thank you for using Amazon. ')
         type_effect('I wish seeing you again. ') 
-
 
 
 
