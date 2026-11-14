@@ -414,7 +414,7 @@ elif Section == '3':
 
         checkout = int(input('Please choose a card to prooceed checkout! '))
 
-       if checkout == 1:
+        if checkout == 1:
             type_effect('We have 10% discount in INR(₹) ')
             if choice == 2:
                 Inr = grand_tot / 10
