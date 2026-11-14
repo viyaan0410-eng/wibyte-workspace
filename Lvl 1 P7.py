@@ -410,7 +410,7 @@ elif Section == '3':
         CC = ('Visa', 'Mastercard', 'Amex')
 
         for kk in range(len(CC)):
-         print(str(kk+1) + '. ' + CC[kk])
+            print(str(kk+1) + '. ' + CC[kk])
 
         checkout = int(input('Please choose a card to prooceed checkout! '))
 
