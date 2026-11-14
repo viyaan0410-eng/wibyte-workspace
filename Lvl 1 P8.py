@@ -12,6 +12,10 @@ def type_effect(text, delay=0.05):
 
 
 
+def discount(amount):
+    return amount * 0.10
+
+
 P = print
 
 type_effect('Welcome To Amazon!')
@@ -188,7 +192,9 @@ if Section == '1':
             if checkout == 1:
 
                 if choice == 2:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in INR(₹)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card')
@@ -196,7 +202,9 @@ if Section == '1':
             elif checkout == 2:
 
                 if choice == 3:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in Yen(¥)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card')
@@ -204,7 +212,9 @@ if Section == '1':
             elif checkout == 3:
 
                 if choice == 1:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in Dollar($)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card')
@@ -391,7 +401,9 @@ elif Section == '2':
             if checkout == 1:
 
                 if choice == 2:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in INR(₹)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card, this card is only for INR')
@@ -399,7 +411,9 @@ elif Section == '2':
             elif checkout == 2:
 
                 if choice == 3:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in Yen(¥)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card, this card is only for YEN')
@@ -407,7 +421,9 @@ elif Section == '2':
             elif checkout == 3:
 
                 if choice == 1:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in Dollar($)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card, this card is only for DOLLAR')
@@ -594,7 +610,9 @@ elif Section == '3':
             if checkout == 1:
 
                 if choice == 2:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in INR(₹)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card, this card is only for INR')
@@ -602,7 +620,9 @@ elif Section == '3':
             elif checkout == 2:
 
                 if choice == 3:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in Yen(¥)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card, this card is only for YEN')
@@ -610,7 +630,9 @@ elif Section == '3':
             elif checkout == 3:
 
                 if choice == 1:
-                    print('Please Pay', round(total, 2))
+                    type_effect('We have 10% discount in Dollar($)')
+                    final_total = total - discount(total)
+                    print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card, this card is only for DOLLAR')
@@ -635,3 +657,7 @@ elif Section == '3':
 
 else:
     print('Sorry, that was not a valid section!')
+
+
+
+
