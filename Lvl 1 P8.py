@@ -12,7 +12,7 @@ def type_effect(text, delay=0.05):
 
 
 
-def discount(amount):
+def card_discount(amount):
     return amount * 0.10
 
 
@@ -98,14 +98,14 @@ if Section == '1':
     print('The total(INR): ', grand_tot)
     type_effect('\n')
     print('If you purchase for (INR)', next_500, 'you will get a 10% discount')
-    discount_wanted = input('Would you like to take this offer? (Y/N)\n')
+    discount_wanted = input('Would you like to take this offer? (Y/N)\n').upper()
     add_quant = []
 
     if discount_wanted == 'Y':
         type_effect('You have the following options\n')
 
         for kk in range(len(menu)):
-            add_quant.append(int(gap_500//int(price[kk])+1))
+            add_quant.append(int((gap_500+int(price[kk])-1)//int(price[kk])))
             print(str(kk+1), '. Add', menu[kk], str(add_quant[kk]), 'units')
 
         add_on = int(input('Please indicate your preference\n'))
@@ -128,7 +128,7 @@ if Section == '1':
     print('Updated Shopping Cart')
     print('Item', 'Quant', 'Unit Price', 'Total', sep='\t\t\t')
 
-    for kk in raprintnge(len(shopping_cart)):
+    for kk in range(len(shopping_cart)):
         idx = menu.index(shopping_cart[kk])
         unit_price = int(price[idx])
         tot_price = round(unit_price * shopping_quant[kk], 2)
@@ -143,8 +143,8 @@ if Section == '1':
     else:
         discount = 0.0
 
-    type_effect('Your total order is (INR)', grand_tot)
-    type_effect('Discount (10%) is (INR)', discount)
+    print('Your total order is (INR)', grand_tot)
+    print('Discount (10%) is (INR)', discount)
     grand_tot = round(grand_tot-discount, 2)
 
     type_effect('\n')
@@ -194,7 +194,7 @@ if Section == '1':
 
                 if choice == 2:
                     type_effect('We have 10% discount in INR(₹)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -205,7 +205,7 @@ if Section == '1':
 
                 if choice == 3:
                     type_effect('We have 10% discount in Yen(¥)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -215,7 +215,7 @@ if Section == '1':
 
                 if choice == 1:
                     type_effect('We have 10% discount in Dollar($)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -312,14 +312,14 @@ elif Section == '2':
 
     print()
     print('If you purchase for (INR)', next_500, 'you will get a 10% discount')
-    discount_wanted = input('Would you like to take this offer? (Y/N)')
+    discount_wanted = input('Would you like to take this offer? (Y/N)').upper()
     add_quant = []
 
     if discount_wanted == 'Y':
         print('You have the following options\n')
 
         for kk in range(len(menu)):
-            add_quant.append(int(gap_500//int(price[kk])+1))
+            add_quant.append(int((gap_500+int(price[kk])-1)//int(price[kk])))
             print(str(kk+1), '. Add', menu[kk], str(add_quant[kk]), 'units')
 
         add_on = int(input('Please indicate your preference\n'))
@@ -408,7 +408,7 @@ elif Section == '2':
 
                 if choice == 2:
                     type_effect('We have 10% discount in INR(₹)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -419,7 +419,7 @@ elif Section == '2':
 
                 if choice == 3:
                     type_effect('We have 10% discount in Yen(¥)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -429,7 +429,7 @@ elif Section == '2':
 
                 if choice == 1:
                     type_effect('We have 10% discount in Dollar($)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -524,14 +524,14 @@ elif Section == '3':
 
     print()
     print('If you purchase for (INR)', next_500, 'you will get a 10% discount')
-    discount_wanted = input('Would you like to take this offer? (Y/N)')
+    discount_wanted = input('Would you like to take this offer? (Y/N)').upper()
     add_quant = []
 
     if discount_wanted == 'Y':
         print('You have the following options\n')
 
         for kk in range(len(menu)):
-            add_quant.append(int(gap_500//int(price[kk])+1))
+            add_quant.append(int((gap_500+int(price[kk])-1)//int(price[kk])))
             print(str(kk+1), '. Add', menu[kk], str(add_quant[kk]), 'units')
 
         add_on = int(input('Please indicate your preference\n'))
@@ -620,7 +620,7 @@ elif Section == '3':
 
                 if choice == 2:
                     type_effect('We have 10% discount in INR(₹)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -630,7 +630,7 @@ elif Section == '3':
 
                 if choice == 3:
                     type_effect('We have 10% discount in Yen(¥)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
@@ -640,7 +640,7 @@ elif Section == '3':
 
                 if choice == 1:
                     type_effect('We have 10% discount in Dollar($)')
-                    final_total = total - discount(total)
+                    final_total = total - card_discount(total)
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
