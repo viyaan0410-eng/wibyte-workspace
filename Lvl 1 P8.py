@@ -660,5 +660,6 @@ elif Section == '3':
 
 
 else:
+    print('\n')
     print('Sorry, that was not a valid section!')
     print('Please refresh the code...')

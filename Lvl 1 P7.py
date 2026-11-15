@@ -30,6 +30,7 @@ Section = input('In which section do you want to buy?\n')
 
 
 if Section == '1':
+    print('\n')
 
     menu = ['Pizza', 'Milkshake', 'Burger', 'Ice-Cream', 'Sandwich']
     price = ['150', '120', '100', '40', '60']
@@ -185,10 +186,10 @@ if Section == '1':
     print('--------------------------------------------\n')
 
 
-# ---------------- CLOTH SECTION ----------------
+# ---------------- ----------------------------------------------------------
 
 elif Section == '2':
-
+    print('\n')
     menu = ['T-shirt', 'Jeans', 'Kurta', 'Track pant', 'Shirt']
     price = ['300', '420', '301', '720', '610']
 
@@ -343,11 +344,11 @@ elif Section == '2':
     print('--------------------------------------------\n')
 
 
-# ---------------- ELECTRONICS SECTION ----------------
+# -------------------------------------------------------------------------------------------------------
 
 elif Section == '3':
-
-    menu = ['Tv', 'Mobile', 'Fridge', 'Ps5', 'X-box']
+    print('\n')
+    menu = ['Tablet', 'Mobile', 'Fridge', 'Laptop', 'X-box']
     price = ['35000', '40020', '30001', '70020', '61210']
 
     for kk in range(len(menu)):
@@ -502,4 +503,6 @@ elif Section == '3':
 
 
 else:
+    print('\n')
     print('Sorry, that was not a valid section!')
+    print('Please refresh the code...')
