@@ -31,7 +31,7 @@ Section = input('In which section do you want to buy?\n')
 
 if Section == '1':
 
-    menu = ['Pizza', 'Milkshake', 'Burger', 'Ice-Cream', 'Taco']
+    menu = ['Pizza', 'Milkshake', 'Burger', 'Ice-Cream', 'Sandwich']
     price = ['150', '120', '100', '40', '60']
 
     for kk in range(len(menu)):

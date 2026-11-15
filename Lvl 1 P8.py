@@ -20,7 +20,7 @@ P = print
 
 type_effect('Welcome To Amazon!')
 
-Choice = (' Food', 'Cloth', 'Electronics')
+Choice = ('Food', 'Cloth', 'Electronics')
 
 for kk in range(len(Choice)):
     P(str(kk+1) + '.' + Choice[kk], sep='\t')
@@ -29,8 +29,10 @@ Section = input('In which section do you want to buy?\n')
 
 
 if Section == '1':
+    print ('\n')
 
-    menu = ['Pizza', 'Milkshake', 'Burger', 'Ice-Cream', 'Taco']
+
+    menu = ['Pizza', 'Milkshake', 'Burger', 'Ice-Cream', 'Sandwich']
     price = ['150', '120', '100', '40', '60']
 
     for kk in range(len(menu)):
@@ -195,7 +197,8 @@ if Section == '1':
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
-                    type_effect('Cant use this card')
+                    type_effect('Cant use this card, this card is only for INR')
+                    
 
             elif checkout == 2:
 
@@ -205,7 +208,7 @@ if Section == '1':
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
-                    type_effect('Cant use this card')
+                    type_effect('Cant use this card, this card is only for YEN')
 
             elif checkout == 3:
 
@@ -215,10 +218,11 @@ if Section == '1':
                     print('Please Pay', round(final_total, 2))
                     print('Dingg come from the machine')
                 else:
-                    type_effect('Cant use this card')
+                    type_effect('Cant use this card, this card is only for DOLLAR')
 
             else:
                 print('Invalid card choice!')
+
 
         elif d.lower() == 'upi':
 
@@ -235,9 +239,10 @@ if Section == '1':
     print('--------------------------------------------\n')
 
 
-# ---------------- CLOTH SECTION ----------------
+# -----------------------------------------------------------------------------------------------------------------------
 
 elif Section == '2':
+    print ('\n')
 
     menu = ['T-shirt', 'Jeans', 'Kurta', 'Track pant', 'Shirt']
     price = ['300', '420', '301', '720', '610']
@@ -405,6 +410,7 @@ elif Section == '2':
                     print('Dingg come from the machine')
                 else:
                     type_effect('Cant use this card, this card is only for INR')
+                    
 
             elif checkout == 2:
 
@@ -444,9 +450,9 @@ elif Section == '2':
     print('--------------------------------------------\n')
 
 
-# ---------------- ELECTRONICS SECTION ----------------
 
 elif Section == '3':
+    print ('\n')
 
     menu = ['Tv', 'Mobile', 'Fridge', 'Ps5', 'X-box']
     price = ['35000', '40020', '30001', '70020', '61210']
@@ -655,7 +661,4 @@ elif Section == '3':
 
 else:
     print('Sorry, that was not a valid section!')
-
-
-
-
+    print('Please refresh the code...')
