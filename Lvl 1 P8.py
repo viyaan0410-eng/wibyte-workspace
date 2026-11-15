@@ -95,9 +95,9 @@ if Section == '1':
     next_500 = 500*(grand_tot//500+1)
     gap_500 = next_500 - grand_tot
     type_effect('\n')
-    print('The total: ', grand_tot)
+    print('The total(INR): ', grand_tot)
     type_effect('\n')
-    type_effect('If you purchase for (INR)', next_500, 'you will get a 10% discount')
+    print('If you purchase for (INR)', next_500, 'you will get a 10% discount')
     discount_wanted = input('Would you like to take this offer? (Y/N)\n')
     add_quant = []
 
