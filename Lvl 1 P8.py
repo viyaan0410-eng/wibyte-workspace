@@ -28,8 +28,6 @@ for kk in range(len(Choice)):
 Section = input('In which section do you want to buy?\n')
 
 
-# ---------------- FOOD SECTION ----------------
-
 if Section == '1':
 
     menu = ['Pizza', 'Milkshake', 'Burger', 'Ice-Cream', 'Taco']
@@ -50,11 +48,11 @@ if Section == '1':
 
         if 1 <= order <= 5:
 
-            print('Purchasing')
+            type_effect('Purchasing')
             quant = int(input('How many units?\n'))
 
             if quant <= 0:
-                print('Please enter a valid quantity.')
+                type_effect('Please enter a valid quantity.')
 
             elif menu[order-1] in shopping_cart:
                 type_effect('Repeat Purchase')
@@ -73,12 +71,12 @@ if Section == '1':
             type_effect('Sorry that was not a valid input.')
 
 
-    print('\n')
-    print('Your shopping cart')
+    type_effect('\n')
+    type_effect('Your shopping cart')
 
     grand_tot = 0.0
 
-    print('Item', 'Quant', 'Unit Price', 'Total', sep='\t\t\t')
+    type_effect('Item', 'Quant', 'Unit Price', 'Total', sep='\t\t\t')
 
     for kk in range(len(shopping_cart)):
 
@@ -95,13 +93,13 @@ if Section == '1':
     next_500 = 500*(grand_tot//500+1)
     gap_500 = next_500 - grand_tot
 
-    print()
-    print('If you purchase for (INR)', next_500, 'you will get a 10% discount')
-    discount_wanted = input('Would you like to take this offer? (Y/N)')
+    type_effect('\n')
+    type_effect('If you purchase for (INR)', next_500, 'you will get a 10% discount')
+    discount_wanted = input('Would you like to take this offer? (Y/N)\n')
     add_quant = []
 
     if discount_wanted == 'Y':
-        print('You have the following options\n')
+        type_effect('You have the following options\n')
 
         for kk in range(len(menu)):
             add_quant.append(int(gap_500//int(price[kk])+1))
@@ -117,17 +115,17 @@ if Section == '1':
                 shopping_cart.append(menu[add_on-1])
                 shopping_quant.append(add_quant[add_on-1])
 
-            print('shopping cart updated')
+            type_effect('shopping cart updated')
         else:
-            print('Sorry that was not a valid input.')
+            type_effect('Sorry that was not a valid input.')
             discount_wanted = 'N'
 
     grand_tot = 0.0
-    print()
+    type_effect('\n')
     print('Updated Shopping Cart')
     print('Item', 'Quant', 'Unit Price', 'Total', sep='\t\t\t')
 
-    for kk in range(len(shopping_cart)):
+    for kk in raprintnge(len(shopping_cart)):
         idx = menu.index(shopping_cart[kk])
         unit_price = int(price[idx])
         tot_price = round(unit_price * shopping_quant[kk], 2)
@@ -142,8 +140,8 @@ if Section == '1':
     else:
         discount = 0.0
 
-    print('Your total order is (INR)', grand_tot)
-    print('Discount (10%) is (INR)', discount)
+    type_effect('Your total order is (INR)', grand_tot)
+    type_effect('Discount (10%) is (INR)', discount)
     grand_tot = round(grand_tot-discount, 2)
 
     type_effect('\n')
