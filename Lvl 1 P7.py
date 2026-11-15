@@ -19,7 +19,7 @@ P = print
 
 type_effect('Welcome To Amazon!')
 
-Choice = (' Food', 'Cloth', 'Electronics')
+Choice = (' Food', 'Clothes', 'Electronics')
 
 for kk in range(len(Choice)):
     P(str(kk+1) + '.' + Choice[kk], sep='\t')
@@ -27,7 +27,7 @@ for kk in range(len(Choice)):
 Section = input('In which section do you want to buy?\n')
 
 
-# ---------------- FOOD SECTION ----------------
+
 
 if Section == '1':
 
