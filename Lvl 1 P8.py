@@ -76,7 +76,7 @@ if Section == '1':
 
     grand_tot = 0.0
 
-    type_effect('Item', 'Quant', 'Unit Price', 'Total', sep='\t\t\t')
+    print('Item', 'Quant', 'Unit Price', 'Total', sep='\t\t\t')
 
     for kk in range(len(shopping_cart)):
 
