@@ -1,58 +1,181 @@
-import sys
-import time
-
-def type_effect(text, delay=0.05):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(delay)
-    print()  
-    return ''
-
 import turtle
- 
+
 t = turtle.Turtle()
-t.shape('arrow')
-t.speed(0.6)
+ts = t.getscreen()
+ts.bgcolor("white")
+t.speed(6)
+t.pensize(4)
+t.pencolor("black")
 
-#ANimation
+# ground
+t.penup()
+t.goto(-160, -185)
+t.pendown()
+t.fillcolor("green")
+t.begin_fill()
+t.setheading(-45)
+for kk in range(2):
+    t.circle(260, 90)
+    t.circle(35, 90)
+t.end_fill()
 
-def eruption(offset):
-    # volcano
-    t.penup()
-    t.goto(-200,0)
-    t.pendown()
-    t.fillcolor('#6B4F3A')
-    t.begin_fill()
-    
-    t.goto(200,0)
-    
-    t.goto(60,200)
-    
-    t.goto(-60,200)
-    
-    t.goto(-200,0)
-    
-    t.end_fill()
+# volcano
+t.penup()
+t.goto(-140, -145)
+t.pendown()
+t.fillcolor("darkbrown")
+t.begin_fill()
+t.goto(-60, 75)
+t.goto(60, 75)
+t.goto(140, -145)
+t.goto(-140, -145)
+t.end_fill()
+
+# rocks
+t.fillcolor("grey")
+
+t.penup()
+t.goto(-132, -145)
+t.pendown()
+t.begin_fill()
+t.goto(-82, -72)
+t.goto(-80, -125)
+t.goto(-66, -110)
+t.goto(-60, -145)
+t.goto(-132, -145)
+t.end_fill()
+
+t.penup()
+t.goto(-25, -145)
+t.pendown()
+t.setheading(0)
+t.begin_fill()
+for kk in range(3):
+    t.forward(38)
+    t.left(360 / 3)
+t.end_fill()
+
+t.penup()
+t.goto(65, -145)
+t.pendown()
+t.begin_fill()
+t.goto(82, -62)
+t.goto(128, -145)
+t.goto(65, -145)
+t.end_fill()
+
+# bushes
+t.penup()
+t.goto(-165, -150)
+t.pendown()
+t.fillcolor("light green")
+t.begin_fill()
+t.setheading(80)
+t.circle(-20, 140)
+t.setheading(70)
+t.circle(-22, 135)
+t.setheading(75)
+t.circle(-24, 140)
+t.setheading(70)
+t.circle(-22, 135)
+t.setheading(75)
+t.circle(-25, 145)
+t.setheading(70)
+t.circle(-22, 135)
+t.setheading(75)
+t.circle(-24, 140)
+t.setheading(70)
+t.circle(-22, 135)
+t.setheading(75)
+t.circle(-20, 145)
+
+t.setheading(-100)
+t.circle(-18, 95)
+t.setheading(182)
+t.circle(-900, 21)
+t.setheading(105)
+t.circle(-18, 95)
+t.end_fill()
+
+# lava
+t.penup()
+t.goto(-85, 5)
+t.pendown()
+t.fillcolor("orange")
+t.begin_fill()
+t.goto(-60, 75)
+t.goto(60, 75)
+t.goto(98, -30)
+t.goto(85, -35)
+t.goto(55, 2)
+t.goto(36, -48)
+t.goto(24, -48)
+t.goto(0, 12)
+t.goto(-34, -55)
+t.goto(-48, -55)
+t.goto(-55, -12)
+t.goto(-85, -18)
+t.goto(-85, 5)
+t.end_fill()
+
+t.penup()
+t.goto(-76, 30)
+t.pendown()
+t.fillcolor("yellow")
+t.begin_fill()
+t.goto(-60, 75)
+t.goto(60, 75)
+t.goto(88, -2)
+t.goto(55, 32)
+t.goto(36, -24)
+t.goto(26, -24)
+t.goto(0, 42)
+t.goto(-34, -32)
+t.goto(-44, -32)
+t.goto(-52, 26)
+t.goto(-76, 8)
+t.goto(-76, 30)
+t.end_fill()
 
 
-    #ground
-    t.penup()
-    t.goto(-250,0)
-    t.pendown()
-    t.fillcolor("#1EFF00")
-    t.begin_fill()
-    
-    t.goto(250,0)
-    
-    t.goto(250,-50)
-    
-    t.goto(-250,-50)
-    
-    t.goto(-250,50)
-    
-    t.end_fill()
+# smoke
+t.penup()
+t.goto(-52, 75)
+t.pendown()
+t.fillcolor("white")
+t.begin_fill()
+t.setheading(115)
+t.circle(-28, 130)
+t.setheading(110)
+t.circle(-32, 135)
+t.setheading(105)
+t.circle(-35, 140)
+t.setheading(95)
+t.circle(-36, 145)
+t.setheading(75)
+t.circle(-38, 165)
+t.setheading(10)
+t.circle(-26, 165)
+t.setheading(-55)
+t.circle(-32, 150)
+t.setheading(-85)
+t.circle(-30, 140)
+t.setheading(-110)
+t.circle(-25, 125)
+t.goto(-52, 75)
+t.end_fill()
 
-
-
-    
+t.penup()
+t.goto(230, 185)
+t.pendown()
+t.begin_fill()
+t.setheading(135)
+t.circle(-22, 210)
+t.setheading(55)
+t.circle(-22, 210)
+t.setheading(-35)
+t.circle(-22, 210)
+t.setheading(-125)
+t.circle(-22, 210)
+t.end_fill()
+turtle.mainloop()
